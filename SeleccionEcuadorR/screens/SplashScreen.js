@@ -18,14 +18,19 @@ export default function SplashScreen({ navigation }) {
 
     return (
         <View style={styles.contenedor}>
-            <View style={styles.circulo}>
-                <Text style={styles.emoji}>ECUADOR</Text>
-                <Text style={styles.titulo}>LA TRI</Text>
-                <Text style={styles.subtitulo}>Selección Ecuatoriana de Fútbol</Text>
-
-                <TouchableOpacity style={styles.boton} onPress={irAlHome}>
-                    <Text style={styles.botonTexto}>Entrar</Text>
-                </TouchableOpacity>
+            <View style={styles.anilloAmarillo}>
+                <View style={styles.anilloAzul}>
+                    <View style={styles.anilloRojo}>
+                        <View style={styles.circulo}>
+                                <Text style={styles.emoji}>ECUADOR</Text>
+                                <Text style={styles.titulo}>LA TRI</Text>
+                                <Text style={styles.subtitulo}>Selección Ecuatoriana de Fútbol</Text>
+                                <TouchableOpacity style={styles.boton} onPress={irAlHome}>
+                                <Text style={styles.botonTexto}>Entrar</Text>
+                                </TouchableOpacity>
+                        </View>
+                    </View>
+                </View>
             </View>
         </View>
     );
@@ -43,30 +48,30 @@ const styles = StyleSheet.create({
     },
     emoji: {
         fontSize: ANCHO  * 0.1,
-        marginTop: 20,
-        marginBottom: 20,
+        marginTop: 35,
         fontWeight: 'bold',
-        color: '#FFD100',
+        color: '#000000',
     },
     titulo: {
         fontSize: ANCHO * 0.09,
         fontWeight: 'bold',
-        color: '#003087',
-        letterSpacing: 6,
+        color: '#000000',
     },
     subtitulo: {
-        fontSize: ANCHO * 0.04,
-        color: '#003087',
+        fontSize: ANCHO * 0.03,
+        color: '#000000',
     },
     boton: {
-        marginTop: 40,
-        backgroundColor: '#ff0000',
+        marginTop: 25,
+        backgroundColor: '#ffffff',
         paddingHorizontal: 30,
         paddingVertical: 12,
         borderRadius: 20,
+        borderWidth: 2,
+        borderColor: '#003087',
     },
     botonTexto: {
-        color: '#ffffff',
+        color: '#000000',
         fontSize: ANCHO * 0.04,
         fontWeight: 'bold',
     },
@@ -77,7 +82,38 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         padding: 20,
-        borderWidth: 4,
-        borderColor: '#000000',
+    },
+    anilloAmarillo: {
+        width: CIRCULO + 36,
+        height: CIRCULO + 36,
+        borderRadius: (CIRCULO + 36) / 2,
+        backgroundColor: '#FFD100',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    anilloAzul: {
+        width: CIRCULO + 24,
+        height: CIRCULO + 24,
+        borderRadius: (CIRCULO + 24) / 2,
+        backgroundColor: '#003087',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    anilloRojo: {
+        width: CIRCULO + 12,
+        height: CIRCULO + 12,
+        borderRadius: (CIRCULO + 12) / 2,
+        backgroundColor: '#CE1126',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    circulo: {
+        width: CIRCULO,
+        height: CIRCULO,
+        borderRadius: CIRCULO / 2,
+        backgroundColor: '#ffffff',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 20,
     },
 });
