@@ -37,9 +37,13 @@ export default function SplashScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
+    background: {
+        flex: 1,
+        backgroundColor: '#F5F5F5',
+    },
     contenedor: {
         flex: 1,
-        backgroundColor: '#ffffff',
+        backgroundColor: '#F5F5F5',
         alignItems: 'center',
         justifyContent: 'center',
         maxWidth: 430,        
@@ -63,7 +67,7 @@ const styles = StyleSheet.create({
     },
     boton: {
         marginTop: 25,
-        backgroundColor: '#ffffff',
+        backgroundColor: '#F5F5F5',
         paddingHorizontal: 30,
         paddingVertical: 12,
         borderRadius: 20,
@@ -76,6 +80,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     circulo: {
+        backgroundColor: '#F5F5F5',
         width: CIRCULO,
         height: CIRCULO,
         borderRadius: CIRCULO / 2,
@@ -106,14 +111,5 @@ const styles = StyleSheet.create({
         backgroundColor: '#CE1126',
         alignItems: 'center',
         justifyContent: 'center',
-    },
-    circulo: {
-        width: CIRCULO,
-        height: CIRCULO,
-        borderRadius: CIRCULO / 2,
-        backgroundColor: '#ffffff',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: 20,
     },
 });
