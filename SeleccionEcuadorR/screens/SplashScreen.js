@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { Dimensions, Platform  } from 'react-native';
+import { Dimensions, Platform, Image } from 'react-native';
 
 const { width } = Dimensions.get('window');
 const ANCHO = Platform.OS === 'web' ? 380 : width;
@@ -12,7 +12,7 @@ export default function SplashScreen({ navigation }) {
     };
 
     useEffect(() => {
-        const timer = setTimeout(irAlHome, 10000);
+        const timer = setTimeout(irAlHome, 3000);
         return () => clearTimeout(timer);
     }, []);
 
@@ -24,6 +24,10 @@ export default function SplashScreen({ navigation }) {
                         <View style={styles.circulo}>
                                 <Text style={styles.emoji}>ECUADOR</Text>
                                 <Text style={styles.titulo}>LA TRI</Text>
+                                <Image
+                                    source={require('../assets/logo_fef.png')}
+                                    style={{ width: 37, height: 45 }}
+                                />
                                 <Text style={styles.subtitulo}>Selección Ecuatoriana de Fútbol</Text>
                                 <TouchableOpacity style={styles.boton} onPress={irAlHome}>
                                 <Text style={styles.botonTexto}>Entrar</Text>
@@ -57,13 +61,15 @@ const styles = StyleSheet.create({
         color: '#000000',
     },
     titulo: {
-        fontSize: ANCHO * 0.09,
+        fontSize: ANCHO * 0.07,
         fontWeight: 'bold',
         color: '#000000',
+        marginBottom: 7,
     },
     subtitulo: {
         fontSize: ANCHO * 0.03,
         color: '#000000',
+        marginTop: 7,
     },
     boton: {
         marginTop: 25,

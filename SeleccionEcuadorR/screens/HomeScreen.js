@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from 'react-native';
 
 
 export default function HomeScreen() {
@@ -13,7 +13,11 @@ export default function HomeScreen() {
                     <View style={[styles.franja, { backgroundColor: '#003087' }]} />
                     <View style={[styles.franja, { backgroundColor: '#CE1126' }]} />
                 </View>
-                <Text style={styles.headerTexto}>EC LA TRI</Text>
+                <Text style={styles.headerTexto}>ECUADOR</Text>
+                <Image
+                    source={require('../assets/logo_fef.png')}
+                    style={{ width: 37, height: 45 }}
+                />
             </View>
 
             {/* Información del equipo */}
